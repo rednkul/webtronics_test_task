@@ -16,15 +16,15 @@ from .managers import CustomUserManager
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(unique=True, max_length=50)
-    email = models.EmailField('Адрес электронной почты', unique=True)
+    email = models.EmailField( unique=True)
 
-    date_joined = models.DateTimeField('Дата регистрации', auto_now_add=True)
-    is_staff = models.BooleanField('Сотрудник', default=False)
-    is_confirmed = models.BooleanField('Подтвержден', default=False)
-    is_active = models.BooleanField('Активен', default=True)
+    date_joined = models.DateTimeField(auto_now_add=True)
+    is_staff = models.BooleanField(default=False)
+    is_confirmed = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
     objects = CustomUserManager()
-    groups = models.ManyToManyField(Group, verbose_name='Groups', blank=True)
+    groups = models.ManyToManyField(Group, blank=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', ]
 

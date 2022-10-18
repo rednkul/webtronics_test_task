@@ -9,15 +9,18 @@ from .models import Post
 from .serializers import PostSerializer
 from users.permissions import IsOwnerOrAdminOrReadOnly
 
+
 class PostCreateApiView(CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = (IsAuthenticated,)
 
+
 class PostDetailAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = (IsOwnerOrAdminOrReadOnly, )
+    permission_classes = (IsOwnerOrAdminOrReadOnly,)
+
 
 class PostListAPIView(ListAPIView):
     queryset = Post.objects.all()

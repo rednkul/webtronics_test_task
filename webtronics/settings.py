@@ -185,13 +185,3 @@ SITE_ID = 1
 # Настройки для уведомляний по email
 
 
-# EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
-#
-# passwordy = 'kiwnqxlwsndoyntu'
-# EMAIL_HOST = 'smtp.yandex.ru'
-# EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'kulikovn999@yandex.ru'
-# DEFAULT_FROM_EMAIL = 'kulikovn999@yandex.ru'
-# EMAIL_HOST_PASSWORD = "kiwnqxlwsndoyntu"
-# EMAIL_USE_TLS = False
-# EMAIL_USE_SSL = True

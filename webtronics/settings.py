@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'grappelli',
     'rest_framework',
     'rest_framework_simplejwt',
-    # 'allauth',
-    # 'allauth.account',
     'djoser',
 
     # Custom apps

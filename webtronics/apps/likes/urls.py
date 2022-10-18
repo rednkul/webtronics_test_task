@@ -5,6 +5,6 @@ from . import views
 app_name = 'likes'
 
 urlpatterns = [
-    path('create/', login_required(views.LikeCreateApiView.as_view()), name='like_create'),
-    path('detail/<int:pk>/', login_required(views.LikeDetailAPIView.as_view()), name='like_detail'),
+    path('create/', views.LikeCreateApiView.as_view(), name='like_create'),
+    path('detail/<int:pk>/', views.LikeDetailAPIView.as_view(), name='like_detail'),
 ]
